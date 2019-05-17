@@ -47,4 +47,16 @@ public class DeviceVector {
         this.site = site;
     }
     
+    public String toString(){
+        String valToString="[";
+        for(double d:getValues()){
+            if(d==getValues().length)
+                valToString=valToString+d;
+            else
+                valToString=valToString+d+",";
+        }
+        valToString=valToString+"]";
+        return "{site:"+getSite()+", ts:"+getTs()+", values:"+getValues()+"}";
+    }
+    
 }
